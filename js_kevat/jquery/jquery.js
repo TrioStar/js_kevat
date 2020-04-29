@@ -4,7 +4,7 @@ $(document).ready(function(){
     
     $("#warning").css ("color", "red")
 
-    function piilotus$() {
+    function piilotus() {
         $(".special").hide();
     }
 
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
     let students = ["Tiina", "Janne", "Heikki", "Pirkko"];
     
-    $(".part2").appendTo("<p>Tässä uusi juttu, lisätty jQueryllä</p>");
+    $(".part2").append("<p>Tässä uusi juttu, lisätty jQueryllä</p>");
 
     let newList = students.map((student) => "<li>"+student+"</li>")
 

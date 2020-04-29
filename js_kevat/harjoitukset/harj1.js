@@ -94,27 +94,53 @@ console.log(robotti(964))
 
 console.log("------------------Tehtävä 8------------------");
 
-function taksimatka(lasku) {
-    
-}
+function taksimatka(km, pp) {
+    let taksa = null; 
 
-console.log(taksimatka())
+    if (pp == 1 || pp == 2) {
+        taksa = 1.6;
+    } else if (pp == 3 || pp == 4) {
+        taksa = 1.9;
+    } else if (pp == 5 || pp == 6) {
+        taksa = 2;
+    } else if (pp >= 6) {
+        taksa = 2.2;
+    } 
+    var lasku = km * taksa + 5.40;
+    return `Taksimatka hinta on ${lasku}`
+} 
+
+console.log(taksimatka(3, 5))
 
 console.log("------------------Tehtävä 9------------------");
 
-function pyöristä(pyöristys) {
-    desi = 0,5;
-    let x = pyöristys;
-    var answer = x + desi;
-    return `${x} + ${desi} = ${answer}`;
+function pyöristä(x) {
+    if (x >= 0) {
+        return Math.floor(x + 0.5);
+    } else {
+    return Math.ceil(x - 0.5);
+}
 }
 
-console.log(pyöristä(3))
+console.log(pyöristä(3.7))
 
 console.log("------------------Tehtävä 10------------------");
 
-function tuoteen_hinta(hinta) {
-    
+function tuoteen_hinta(euro) {
+    ale = null;
+    if (euro >= 100 && euro <= 200) {
+        ale = 10;
+    } else if (euro >= 200 && euro <= 500) {
+        ale = 15;
+    } else if (euro >= 500) {
+        ale = 20;
+    } 
+    var hinta = euro * ale / 100; 
+    var maksaa = euro - hinta;
+    return `alennus on ${hinta} ja tuote maksaa ${maksaa}`;
 }
 
-console.log(tuoteen_hinta())
+console.log(tuoteen_hinta(20))
+console.log(tuoteen_hinta(143))
+console.log(tuoteen_hinta(353))
+console.log(tuoteen_hinta(1862))
