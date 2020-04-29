@@ -10,5 +10,5 @@ let name = ["Star","Arlet","Juuso","Roni"];
 
 name.forEach(name =>{
     let elem = newListEmel(name,"li");
-    myList.appendChild(eelem);
+    myList.appendChild(elem);
 })

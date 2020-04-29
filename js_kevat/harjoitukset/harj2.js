@@ -1,4 +1,4 @@
-hconsole.log("------------------uudet tehtävät------------------");
+console.log("------------------uudet tehtävät------------------");
 console.log("▐");
 
 console.log("------------------Tehtävä 1------------------");
