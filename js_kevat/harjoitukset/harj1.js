@@ -59,12 +59,13 @@ console.log(pinta_ala(23,2.2))
 
 console.log("------------------Tehtävä 6------------------");
 
-function osamäärä(jaettava, jakava) {
-    var summa = jaettava / jakava;
-    return `${jaettava} / ${jakava} = ${summa}`
+function osamäärä(jaettava, jakaja) {
+    if (jakaja === 0);
+    var summa = jaettava / jakaja;
+    return `${jaettava} / ${jakaja} = ${summa}`
 }
 
-console.log(osamäärä(2, 0))
+console.log(osamäärä(4, 0))
 console.log(osamäärä(64, 8))
 
 console.log("------------------Tehtävä 7------------------");
