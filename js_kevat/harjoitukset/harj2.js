@@ -27,9 +27,9 @@ opiskelijat.forEach((element, i) => {
 let opiskelija1 = {nimi: "Tiina", ikä: 47, sähköposti: "testi@testi.net"}
 let opiskelija2 = {nimi: "Pekka", ikä: 33, sähköposti:  "testi1@testi.net"}
 let opiskelija3 = {nimi: "Minna", ikä: 22, sähköposti:  "testi2@testi.net"}
-let opiskelija4 = {nimi: "Aku Ankka",osoite: "tampere", ikä: 31, sähköposti: "testi3@testi.net"}
+let opiskelija4 = {nimi: "Aku Ankka",osoite: "tampere",puh:000111222333, ikä: 33, sähköposti: "aku.ankka@ankkalinna.com"}
 
-let olio_opiskelijat = [opiskelija1, opiskelja2, opiskelja3, opiskelija4];
+let olio_opiskelijat = [opiskelija1, opiskelija2, opiskelija3, opiskelija4];
 
 function tulostaOpiskelja() {
     return (`Nimi: ${opiskelija1.nimi}, osoite: ${opiskelija4.osoite}, ikä: ${opiskelija2.ikä}, sähköposti: ${opiskelija3.sähköposti}`);

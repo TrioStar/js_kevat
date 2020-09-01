@@ -64,22 +64,22 @@ function osamäärä(jaettava, jakava) {
     return `${jaettava} / ${jakava} = ${summa}`
 }
 
-console.log(osamäärä(2, 2))
+console.log(osamäärä(2, 0))
 console.log(osamäärä(64, 8))
 
 console.log("------------------Tehtävä 7------------------");
 
 function robotti(aalonpituus) {
     let vari = "";
-    if (aalonpituus >= 380 && aalonpituus <= 449) {
+    if (aalonpituus >= 380 && aalonpituus <= 450) {
         vari = "voiletti";
-    } else if (aalonpituus >= 450 && aalonpituus <= 489) {
+    } else if (aalonpituus >= 450 && aalonpituus <= 490) {
         vari = "sininen";
-    } else if (aalonpituus >= 490 && aalonpituus <= 559) {
+    } else if (aalonpituus >= 490 && aalonpituus <= 560) {
         vari = "vihreä";
-    } else if (aalonpituus >= 560 && aalonpituus <= 589) {
+    } else if (aalonpituus >= 560 && aalonpituus <= 590) {
         vari = "keltainen";
-    } else if (aalonpituus >= 590 && aalonpituus <= 629) {
+    } else if (aalonpituus >= 590 && aalonpituus <= 630) {
         vari = "oranssi";
     } else if (aalonpituus >= 630 && aalonpituus <= 760) {
         vari = "punainen";
@@ -88,7 +88,7 @@ function robotti(aalonpituus) {
     } return vari;
 }
 
-console.log(robotti(398))
+console.log(robotti(490))
 console.log(robotti(675))
 console.log(robotti(964))
 
@@ -137,7 +137,7 @@ function tuoteen_hinta(euro) {
     } 
     var hinta = euro * ale / 100; 
     var maksaa = euro - hinta;
-    return `alennus on ${hinta} ja tuote maksaa ${maksaa}`;
+    return `alennus on ${ale} (${hinta}€) ja tuote maksaa ${maksaa}`;
 }
 
 console.log(tuoteen_hinta(20))
