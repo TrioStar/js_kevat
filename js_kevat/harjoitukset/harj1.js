@@ -105,7 +105,7 @@ function taksimatka(km, pp) {
         taksa = 1.9;
     } else if (pp == 5 || pp == 6) {
         taksa = 2;
-    } else if (pp >= 6) {
+    } else if (pp > 6) {
         taksa = 2.2;
     } 
     var lasku = km * taksa + 5.40;
