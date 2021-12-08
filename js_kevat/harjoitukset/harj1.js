@@ -1,4 +1,6 @@
 console.log("- - - - - - - - uudet tehtävät - - - - - - - -");
+console.log("▐");
+console.log("Hello World");
 
 console.log("------------------Tehtävä 1------------------");
 
@@ -57,31 +59,27 @@ console.log(pinta_ala(23,2.2))
 
 console.log("------------------Tehtävä 6------------------");
 
-function osamäärä(jaettava, jakaja) {
-    if (jakaja === 0) {
-        return `Nollalla jakaminen ei toimi`;
-    } else {
-    var summa = jaettava / jakaja;
-    return `${jaettava} / ${jakaja} = ${summa}`
-    }
+function osamäärä(jaettava, jakava) {
+    var summa = jaettava / jakava;
+    return `${jaettava} / ${jakava} = ${summa}`
 }
 
-console.log(osamäärä(4, 0))
+console.log(osamäärä(0, 2))
 console.log(osamäärä(64, 8))
 
 console.log("------------------Tehtävä 7------------------");
 
 function robotti(aalonpituus) {
     let vari = "";
-    if (aalonpituus >= 380 && aalonpituus <= 450) {
-        vari = "violetti";
-    } else if (aalonpituus >= 450 && aalonpituus <= 490) {
+    if (aalonpituus >= 380 && aalonpituus <= 449) {
+        vari = "voiletti";
+    } else if (aalonpituus >= 450 && aalonpituus <= 489) {
         vari = "sininen";
-    } else if (aalonpituus >= 490 && aalonpituus <= 560) {
+    } else if (aalonpituus >= 490 && aalonpituus <= 559) {
         vari = "vihreä";
-    } else if (aalonpituus >= 560 && aalonpituus <= 590) {
+    } else if (aalonpituus >= 560 && aalonpituus <= 589) {
         vari = "keltainen";
-    } else if (aalonpituus >= 590 && aalonpituus <= 630) {
+    } else if (aalonpituus >= 590 && aalonpituus <= 629) {
         vari = "oranssi";
     } else if (aalonpituus >= 630 && aalonpituus <= 760) {
         vari = "punainen";
@@ -90,8 +88,9 @@ function robotti(aalonpituus) {
     } return vari;
 }
 
-console.log(robotti(490))
+console.log(robotti(400))
 console.log(robotti(675))
+console.log(robotti(460))
 console.log(robotti(964))
 
 console.log("------------------Tehtävä 8------------------");
@@ -105,14 +104,14 @@ function taksimatka(km, pp) {
         taksa = 1.9;
     } else if (pp == 5 || pp == 6) {
         taksa = 2;
-    } else if (pp > 6) {
+    } else if (pp >= 6) {
         taksa = 2.2;
     } 
     var lasku = km * taksa + 5.40;
-    return `Taksimatka hinta on ${lasku}`;
+    return `Taksimatka hinta on ${lasku}`
 } 
 
-console.log(taksimatka(3, 5));
+console.log(taksimatka(3, 5))
 
 console.log("------------------Tehtävä 9------------------");
 
@@ -125,13 +124,11 @@ function pyöristä(x) {
 }
 
 console.log(pyöristä(3.7))
-console.log(pyöristä(-4.7))
 
 console.log("------------------Tehtävä 10------------------");
 
 function tuoteen_hinta(euro) {
     ale = null;
-    
     if (euro >= 100 && euro <= 200) {
         ale = 10;
     } else if (euro >= 200 && euro <= 500) {
@@ -141,7 +138,7 @@ function tuoteen_hinta(euro) {
     } 
     var hinta = euro * ale / 100; 
     var maksaa = euro - hinta;
-    return `alennus on ${ale} (${hinta}€) ja tuote maksaa ${maksaa}`;
+    return `alennus on ${hinta} ja tuote maksaa ${maksaa}`;
 }
 
 console.log(tuoteen_hinta(20))
