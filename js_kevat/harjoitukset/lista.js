@@ -1,35 +1,41 @@
-export let maanantai = [
-    {   pääruoka:"peruna muusi, nakit",
+export let ruokaLista = [
+    {
+        pääruoka:"Perunasose, Nakit",
         kasvisruoka:"salaatti, maissi, kurkku",
-        juomat:"maito, piimä",
+        juomat:"maito, piimä, vesi",
         päivämäärä:27.4,
         viikonpäivä:"maanantia",
-    }]
-export let tiistai = [
-    {   pääruoka:", nakit",
+        kuva:"https://public.keskofiles.com/f/recipe/000025z8?w=1440&h=640&fit=crop&q=60&fm=webp"
+    },
+    {
+        pääruoka:"Joulukinkku, nakit",
         kasvisruoka:"salaatti, tomaatti",
-        juomat:"maito, piimä",
+        juomat:"maito, piimä, vesi",
         päivämäärä:28.4,
-        viikonpäivä:"maanantia"
-    }]
-export let keskiviikko = [
-    {   pääruoka:"makaronilaatikko, nakit",
+        viikonpäivä:"Tiistai",
+        kuva:"https://public.keskofiles.com/f/recipe/000025z8?w=1440&h=640&fit=crop&q=60&fm=webp"
+    },
+    {
+        pääruoka:"makaronilaatikko, nakit",
         kasvisruoka:"salaatti",
-        juomat:"maito, piimä",
+        juomat:"maito, piimä, vesi",
         päivämäärä:29.4,
-        viikonpäivä:"kaskiviikko"
-    }]
-export let torstai = [
-    {   pääruoka:"kalakeitto, nakit",
+        viikonpäivä:"kaskiviikko",
+        kuva:"https://public.keskofiles.com/f/recipe/000025z8?w=1440&h=640&fit=crop&q=60&fm=webp"
+    },
+    {
+        pääruoka:"Jauheliha-makaronilaatikko",
         kasvisruoka:"salaatti",
-        juomat:"maito, piimä",
+        juomat:"maito, piimä, vesi",
         päivämäärä:30.4,
-        viikonpäivä:"maanantia"
-    }]
-export let perjentai = [
-    {   pääruoka:"peruna muusi, nakit",
+        viikonpäivä:"Torstai",
+        kuva:"https://public.keskofiles.com/f/recipe/000025z8?w=1440&h=640&fit=crop&q=60&fm=webp"
+    },
+    {
+        pääruoka:"talontapaan",
         kasvisruoka:"salaatti",
-        juomat:"maito, piimä",
+        juomat:"maito, piimä, vesi",
         päivämäärä:1.5,
-        viikonpäivä:"maanantia"
+        viikonpäivä:"Perjentai",
+        kuva:"https://public.keskofiles.com/f/recipe/000025z8?w=1440&h=640&fit=crop&q=60&fm=webp"
     }]
