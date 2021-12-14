@@ -1,5 +1,4 @@
 console.log("- - - - - - - - uudet tehtävät - - - - - - - -");
-console.log("▐");
 console.log("Hello World");
 
 console.log("------------------Tehtävä 1------------------");
@@ -8,7 +7,7 @@ function tervehdi(nimi) {
     return `Hei, ${nimi}. Mitä kuuluu?`;
 }
 
-console.log(tervehdi("Star"));
+console.log(tervehdi("arlet"));
 
 console.log("------------------Tehtävä 2------------------");
 
@@ -127,7 +126,7 @@ console.log(pyöristä(3.7))
 
 console.log("------------------Tehtävä 10------------------");
 
-function tuoteen_hinta(euro) {
+function tuoteen_hinta(euro, alv) {
     ale = null;
     if (euro >= 100 && euro <= 200) {
         ale = 10;
@@ -138,10 +137,11 @@ function tuoteen_hinta(euro) {
     } 
     var hinta = euro * ale / 100; 
     var maksaa = euro - hinta;
-    return `alennus on ${hinta} ja tuote maksaa ${maksaa}`;
+    maksaa = Math.floor(maksaa * (alv + 1) * 100) / 100;
+    return `alennus on ${hinta} ja tuote maksaa ${maksaa}, alv on ${alv}`;
 }
 
-console.log(tuoteen_hinta(20))
-console.log(tuoteen_hinta(143))
-console.log(tuoteen_hinta(353))
-console.log(tuoteen_hinta(1862))
+console.log(tuoteen_hinta(20, 0.24))
+console.log(tuoteen_hinta(143, 0.19))
+console.log(tuoteen_hinta(353, 0.24))
+console.log(tuoteen_hinta(1862, 0.19))
