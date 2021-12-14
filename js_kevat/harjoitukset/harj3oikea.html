@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <title>Harjoitukset 3</title>
 </head>
+
 <body>
 
     <div id="teht1">
         <h1>Tehtävä 1</h1>
         <p>Anna nimesi: </p>
-        <input type="text" id="name"/>
+        <input id='name' type="text" value="" />
         <button id="go1">Go!</button>
-        <input type="button" onclick="nimesi()" value="anna nimesi" />
+        <p id="nimesi">Hei, kirjoita nimesi</p>
 
-        <p><span id="txttulos"></span></p>
     </div>
     <div>
         <h1>Tehtävä 2</h1>
         <p>Anna ikäsi</p>
-        <input type="button" onclick="ikä()" value="anna ikäsi">
+        <input id='ika' type="text" value="" />
+        <button id="go2">Go!</button>
+        <p id="ikä">hei, kirjoita ikäsi</p>
 
-        <p><span id="txttulos2"></span></p>
     </div>
     <div>
         <h1>Tehtävä 3</h1>
-        <p>Anna ikäsi</p>
-        <input type="button" onclick="lotto()" value="lotto">
+        <p>Lottoomaan</p>
+        <p>Alaraja <input id="alaraja" type="text"></p>
+        <p>Yläraka <input id="yläraja" type="text"></p>
+        <p>Arvaa <input id="arvaa" type="text"></p>
 
-        <p><span id="txtlotto"></span></p>
+        <p id="lotto">Testaa onnea</p>
+
+        <button id="go3">Go!</button>
+
     </div>
     <script src="harj3oikea.js"></script>
 </body>

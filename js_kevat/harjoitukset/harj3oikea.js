@@ -1,61 +1,84 @@
-function nimesi() {
-    let nimi = prompt("anna nimesi");
-    document.getElementById("txttulos").innerHTML =
-        "Hei, " + nimi + " oletko valmin aloittamaan?";
-}
-let ika = 0;
-function ikä() {
-    ika = prompt("anna ikasi");
+let myNimesi = document.getElementById("nimesi");
+let myName = document.getElementById("name");
+let myGo1 = document.getElementById("go1");
 
+let myIkäText = document.getElementById("ikä");
+let myIkaNum = document.getElementById("ika");
+let myGo2 = document.getElementById("go2");
+
+let myAlaraja = document.getElementById("alaraja");
+let myYläraja = document.getElementById("yläraja");
+let myArvaa = document.getElementById("arvaa");
+let myLotto = document.getElementById("lotto");
+let myGo3 = document.getElementById("go3");
+
+
+
+function nimesi() {
+    let name = myName.value;
+    myNimesi.innerText = "Hei, " + name + " oletko valmin aloittamaan?";
+}
+
+myGo1.addEventListener("click", nimesi);
+
+
+let ika = myIkaNum.value;
+function ikä() {
+    ika = myIkaNum.value;
     if (ika < 18) {
-        document.getElementById("txttulos2").innerHTML =
+        myIkäText.innerText =
             ika + " vuotias on liian nuori";
     } else if (ika >= 18 && ika < 129) {
-        document.getElementById("txttulos2").innerHTML =
+        myIkäText.innerText =
             ika + " vuotias on täysi-ikainen";
     } else if (ika > 130) {
-        document.getElementById("txttulos2").innerHTML =
-            "älä valehtele et ole " + ika + "vuotias";
+        myIkäText.innerText =
+            "älä valehtele et ole " + ika + " vuotias";
     } else {
-        document.getElementById("txttulos2").innerHTML =
+        myIkäText.innerText =
             ika + " ei ole numero";
     }
-
 }
+myGo2.addEventListener("click", ikä);
 
 function lotto() {
     if (ika >= 18) {
 
-        let alaraja = prompt("anna alaraja");
-        let yläraja = prompt("anna yläraja");
-        let arvaa = prompt("arvaa " + alaraja + " ja " + yläraja + " välillä");
+        let alaraja = Number(myAlaraja.value);
+        let yläraja = Number(myYläraja.value);
+        let arvaa = Number(myArvaa.value);
 
-        let result = Math.random() * (eval(yläraja) - eval(alaraja) + 1) + eval(alaraja);
-        let s = Math.floor(result);
+        let result = Math.random() * (yläraja - alaraja + 1) + alaraja;
+        let s = Math.ceil(result);
         if (alaraja == null || yläraja == null) {
-            document.getElementByI("txtlotto").innerHTML =
+            myLotto.innerHTML =
                 "ala- tai yläraja on null";
         } else if (alaraja == yläraja) {
-            document.getElementById("txtlotto").innerHTML =
+            myLotto.innerHTML =
                 "alaraja ja yläraja ei voi olla samat";
         } else if (alaraja < 0 || yläraja < 0) {
-            document.getElementById("txtlotto").innerHTML =
+            myLotto.innerHTML =
                 "alaraja tai yläraja ei voi olla negatiivinen luku";
         }  else if (arvaa == s) {
-            document.getElementById("txtlotto").innerHTML =
+            myLotto.innerHTML =
                 "arvasit oikein";
         } else if (alaraja > yläraja) {
-            document.getElementById("txtlotto").innerHTML =
+            myLotto.innerHTML =
                 "alaraja oli isompi kuin yläraja";
-        } else if (arvaa < alaraja || arvaa > yläraja) {
-            document.getElementById("txtlotto").innerHTML =
-                "et arvannu " + alaraja + " tai " + yläraja + " välillä";
+        } else if (arvaa < alaraja) {
+            myLotto.innerHTML =
+                "arvaus meni " + alaraja + " alle";
+        } else if(arvaa > yläraja) {
+            myLotto.innerHTML =
+                "arvaus meni " + yläraja + " yli";
         } else if (arvaa != s) {
-            document.getElementById("txtlotto").innerHTML =
+            myLotto.innerHTML =
                 "arvasit väärin tulos oli " + s;
         }
     }else if (ika < 18) {
-            document.getElementById("txtlotto").innerHTML =
+            myLotto.innerHTML =
                 "et ole täysi-ikäinen";
         }
 }
+
+myGo3.addEventListener("click", lotto);
